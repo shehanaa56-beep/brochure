@@ -2243,6 +2243,9 @@ details.faq-card[open] .faq-answer-pane {
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
   border: 1px solid var(--border-light);
   overflow: hidden;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
   transform: translateY(20px) scale(0.98);
   transition: transform var(--transition-normal);
 }
@@ -2294,6 +2297,8 @@ details.faq-card[open] .faq-answer-pane {
 
 .modal-body-form {
   padding: 2rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .form-row {
@@ -2494,6 +2499,22 @@ details.faq-card[open] .faq-answer-pane {
   }
   .floating-glass-card {
     display: none;
+  }
+  .modal-overlay {
+    padding: 0.75rem;
+  }
+  .enquiry-modal-card {
+    border-radius: 16px;
+    max-height: 95vh;
+  }
+  .modal-header-bar {
+    padding: 1.15rem 1.25rem;
+  }
+  .modal-header-bar h3 {
+    font-size: 1.15rem;
+  }
+  .modal-body-form {
+    padding: 1.25rem 1.15rem;
   }
 }
 
