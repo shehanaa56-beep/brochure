@@ -395,7 +395,7 @@
             <!-- Syllabus Section -->
             <div class="sinet-syllabus-block">
               <h5 class="sinet-syllabus-title">Syllabus:</h5>
-              <a href="#connectModal" class="sinet-syllabus-btn">
+              <a href="#enquiryModal" class="sinet-syllabus-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                   <polyline points="14 2 14 8 20 8"/>
@@ -883,9 +883,9 @@
             </p>
           </div>
           <div>
-            <button type="button" class="btn btn-outline" onclick="openEnquiryModal('FAQ Section - Ask Question')">
+            <a href="#enquiryModal" class="btn btn-outline" onclick="openEnquiryModal('FAQ Section - Ask Question')">
               Ask Our Counselors &rarr;
-            </button>
+            </a>
           </div>
         </div>
 
@@ -1214,6 +1214,13 @@
   </a>
   <!-- Client-side handler to dispatch WhatsApp lead from Admission Modal -->
   <script>
+    function openEnquiryModal(topic) {
+      if (topic && document.getElementById('enquiryTopic')) {
+        document.getElementById('enquiryTopic').value = topic;
+      }
+      window.location.hash = 'enquiryModal';
+    }
+
     function handleAdmissionWhatsAppSubmit(e) {
       if (e) e.preventDefault();
       
