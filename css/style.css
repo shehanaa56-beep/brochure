@@ -925,6 +925,242 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   Certifications & Fee/Syllabus
+   ========================================================================== */
+
+.section-cert-fee {
+  background: var(--bg-dark);
+  background-image: radial-gradient(circle at 20% 50%, rgba(49,94,251,0.12) 0%, transparent 55%),
+                    radial-gradient(circle at 80% 50%, rgba(25,197,232,0.08) 0%, transparent 55%);
+  padding: 5rem 0;
+}
+
+.cert-fee-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+.cert-fee-divider {
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(49,94,251,0.4), rgba(25,197,232,0.4), transparent);
+  align-self: stretch;
+  margin: 0 2.5rem;
+  min-height: 320px;
+}
+
+.cert-fee-card {
+  padding: 1rem 0.5rem;
+}
+
+.cert-fee-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(49,94,251,0.12);
+  border: 1.5px solid rgba(49,94,251,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.cert-fee-icon-wrap-accent {
+  background: rgba(25,197,232,0.10);
+  border-color: rgba(25,197,232,0.25);
+}
+
+.cert-fee-heading {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+}
+
+.cert-fee-heading-accent {
+  color: #19C5E8;
+}
+
+/* Cert list */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.cert-medal {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.cert-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cert-item-title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.cert-item-sub {
+  font-size: 0.83rem;
+  color: #64748B;
+  margin: 0;
+}
+
+.cert-conditions {
+  font-size: 0.8rem;
+  color: #19C5E8;
+  margin: 0.25rem 0 0 0;
+  font-style: italic;
+}
+
+/* Fee details */
+.fee-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.fee-row:last-child {
+  border-bottom: none;
+}
+
+.fee-row-highlight .fee-value {
+  color: #19C5E8;
+}
+
+.fee-row-total {
+  border-top: 1px solid rgba(49,94,251,0.35);
+  margin-top: 0.25rem;
+  padding-top: 0.75rem;
+}
+
+.fee-row-total .fee-label,
+.fee-row-total .fee-value {
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.fee-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #94A3B8;
+}
+
+.fee-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.fee-badge {
+  display: inline-block;
+  background: rgba(49,94,251,0.2);
+  color: #315EFB;
+  border: 1px solid rgba(49,94,251,0.35);
+  border-radius: 20px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.73rem;
+  font-weight: 600;
+}
+
+/* Syllabus CTA */
+.syllabus-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.syllabus-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.syllabus-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #315EFB;
+  text-decoration: none;
+  border: 1.5px solid rgba(49,94,251,0.35);
+  border-radius: 10px;
+  padding: 0.65rem 1.1rem;
+  background: rgba(49,94,251,0.07);
+  transition: all 0.2s;
+}
+
+.syllabus-link:hover {
+  background: rgba(49,94,251,0.16);
+  border-color: #315EFB;
+  color: #6B8FFB;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cert-fee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-fee-divider {
+    width: 100%;
+    height: 1px;
+    min-height: unset;
+    background: linear-gradient(to right, transparent, rgba(49,94,251,0.4), transparent);
+    margin: 1.75rem 0;
+  }
+
+  .cert-fee-card {
+    padding: 0.25rem 0;
+  }
+
+  .section-cert-fee {
+    padding: 3rem 0;
+  }
+}
+
+/* ==========================================================================
    Tools & Technologies
    ========================================================================== */
 .section-tools {
