@@ -1934,12 +1934,6 @@ details.faq-card[open] .faq-answer-pane {
 }
 
 @media (max-width: 860px) {
-  .nav-links, .nav-cta {
-    display: none;
-  }
-  .mobile-toggle {
-    display: block;
-  }
   .hero-title {
     font-size: 2.5rem;
   }
@@ -1964,6 +1958,9 @@ details.faq-card[open] .faq-answer-pane {
 }
 
 @media (max-width: 600px) {
+  .header-phone-link {
+    display: none;
+  }
   .hero-title {
     font-size: 2rem;
   }
