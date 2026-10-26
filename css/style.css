@@ -2245,23 +2245,33 @@ details.faq-card[open] .faq-answer-pane {
 }
 
 /* Floating Mobile Quick Action Bar */
-.mobile-bottom-bar {
-  display: none;
+/* Fixed Floating WhatsApp Button */
+.whatsapp-float-btn {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #FFFFFF;
-  border-top: 1px solid var(--border-light);
-  padding: 0.65rem 1rem;
-  z-index: 999;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  bottom: 28px;
+  right: 20px;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: wa-pulse 2.5s infinite;
 }
 
-.mobile-bottom-buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1.4fr;
-  gap: 0.5rem;
+.whatsapp-float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.65);
+  animation: none;
+}
+
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 4px 18px rgba(37,211,102,0.45); }
+  50%       { box-shadow: 0 4px 28px rgba(37,211,102,0.75); }
 }
 
 /* ==========================================================================
