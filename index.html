@@ -128,11 +128,8 @@
       var waNumber = "918086800700";
       var waUrl = "https://api.whatsapp.com/send?phone=" + waNumber + "&text=" + encodeURIComponent(waMessage);
 
-      // 1. Open WhatsApp to 80868 00700 in new window/tab
-      window.open(waUrl, '_blank');
-
-      // 2. Immediately enter the course details site page
-      var targetPage = "course-details.html?name=" + encodeURIComponent(name) + "&phone=" + encodeURIComponent(phone) + "&course=" + encodeURIComponent(course);
+      // Navigate directly to course-details with lead trigger (avoids blank tab in Chrome)
+      var targetPage = "course-details.html?lead=1&name=" + encodeURIComponent(name) + "&phone=" + encodeURIComponent(phone) + "&course=" + encodeURIComponent(course);
       window.location.href = targetPage;
 
       return false;
